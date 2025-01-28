@@ -1,7 +1,7 @@
 # Hands-On 2 Assignment
-# Name: Arpankumar Vipulbhai Sheladiya
-# Student Id: 1002276493
-# UTA Mail Id: axs64933@mavs.uta.edu
+### Name: Arpankumar Vipulbhai Sheladiya
+### Student Id: 1002276493
+### UTA Mail Id: axs64933@mavs.uta.edu
 
 ### Files:
 - **`HO2_InsertionSort.py`**: Insertion Sort implementation
