@@ -4,12 +4,12 @@
 # UTA Mail Id: axs64933@mavs.uta.edu
 
 ### Files:
-- **`insertion_sort.py`**: Insertion Sort implementation
-- **`selection_sort.py`**: Selection Sort implementation
-- **`bubble_sort.py`**: Bubble Sort implementation
-- **`selection_sort_correctness.pdf`**: Argument for Selection Sort's correctness
+- **`HO2_InsertionSort.py`**: Insertion Sort implementation
+- **`HO2_SelectionSort.py`**: Selection Sort implementation
+- **`HO2_BubbleSort.py`**: Bubble Sort implementation
+- **`Argue Selection Sort Correctness.pdf`**: Argument for Selection Sort's correctness
 
 ### System Info:
-- **OS**: Windows 11
-- **Processor**: Intel64, 12 Cores
+- **Operating System**: Windows 11 (10.0.26100)  
+- **Processor**: Intel64 Family 6 Model 126 Stepping 5, GenuineIntel (12 CPU Cores)
 - **RAM**: 15.77 GB
