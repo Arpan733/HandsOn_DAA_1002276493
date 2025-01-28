@@ -14,3 +14,10 @@
 - **Operating System**: Windows 11 (10.0.26100)  
 - **Processor**: Intel64 Family 6 Model 126 Stepping 5, GenuineIntel (12 CPU Cores)
 - **RAM**: 15.77 GB
+
+### Sorting Timings
+| Algorithm        | Size 5 (ms) | Size 10 (ms) | Size 20 (ms) |
+|------------------|-------------|--------------|--------------|
+| **Bubble Sort**  | 0.02        | 0.02         | 0.04         |
+| **Selection Sort** | 0.01       | 0.01         | 0.02         |
+| **Insertion Sort** | 0.02       | 0.02         | 0.03         |
