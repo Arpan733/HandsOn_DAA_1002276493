@@ -65,9 +65,13 @@ If I modified the function to be:
 
 Yes, the addition line of code `y = i + j` will increase the runtime a bit by adding one more operation per iteration. However, the overall time complexity of the algorithm will remain the same: \(O(n^2)\), so the growth rate is still quadratic.
 
+---
+
 ## Question 5: Will it effect your results from #1?
 
 No, it will not affect the results. The time complexity will remain the same \(O(n^2)\), and the added operation does not change the behavior, it will only increase the constant time factor.
+
+---
 
 ## Question 6: Implement merge sort, upload your code to github and show/test it on the array [5,2,4,7,1,3,2,6].
 
