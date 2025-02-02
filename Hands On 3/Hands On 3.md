@@ -41,7 +41,7 @@ y = ax^2 + bx + c
 
 ## Question 4: Approximate Location of `n_0`
 
-The approximate value of `n_0`, where the measured time is height deviates from the actual time which is shown in the plot by `Location of N_0`.
+The approximate value of `n_0`, where the measured time is height deviates from the actual time which is shown in the plot by `Location of N_0`. Also, `n_0` shows the height deviation that occurred during the run of the algorithm.
 
 ![image](https://github.com/user-attachments/assets/30ff6195-1b3b-4554-8268-3821579ccb03)
 
