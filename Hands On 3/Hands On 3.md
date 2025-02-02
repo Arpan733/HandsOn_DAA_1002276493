@@ -1,10 +1,12 @@
 # Assignment Answers
 
+```matlab
 function x = f(n)
    x = 1;
    for i = 1:n
         for j = 1:n
              x = x + 1;
+```
 
 ## Question 1: Find the runtime of the algorithm mathematically.
 
@@ -46,3 +48,29 @@ The approximate value of `n_0`, where the measured time is height deviates from 
 In the plot, **`n_0`** is indicated by the green dashed line. Based on the visual inspection, we can conclude that `n_0` occurs around **[935]**.
 
 ---
+
+If I modified the function to be:
+
+```matlab
+   x = f(n)
+      x = 1;
+      y = 1;
+      for i = 1:n
+         for j = 1:n
+            x = x + 1;
+            y = i + j;
+```
+
+## Question 4: Will this increate how long it takes the algorithm to run (e.x. you are timing the function like in #2)? 
+
+Yes, the addition line of code `y = i + j` will increase the runtime a bit by adding one more operation per iteration. However, the overall time complexity of the algorithm will remain the same: \(O(n^2)\), so the growth rate is still quadratic.
+
+## Question 5: Will it effect your results from #1?
+
+No, it will not affect the results. The time complexity will remain the same \(O(n^2)\), and the added operation does not change the behavior, it will only increase the constant time factor.
+
+## Question 6: Implement merge sort, upload your code to github and show/test it on the array [5,2,4,7,1,3,2,6].
+
+Merge Sort code file name: MergeSort.py
+
+![image](https://github.com/user-attachments/assets/5d4dca11-394f-4f2a-a2d5-988da6c8a813)
