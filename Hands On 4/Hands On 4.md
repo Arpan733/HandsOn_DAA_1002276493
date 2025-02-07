@@ -138,7 +138,7 @@ array3 = [9, 10, 11]
 ```
 ### Output: [1, 2, 3, 4, 7, 8, 9, 10, 11]
 ### Merged array in a sorted order where every element is greater than the previous element.
-File: 
+File: (problem1.py)[https://github.com/Arpan733/HandsOn_DAA_1002276493/blob/main/Hands%20On%204/problem1.py]
 
 Code Summary:
 * Input: K sorted arrays, each of size N.
@@ -177,8 +177,7 @@ Input: array = [1, 2, 2, 3, 4, 4, 4, 5, 5]
 Output: array[] = {1, 2, 3, 4, 5}
 ```
 ### Note, you can't use something like the set container in C++.
-
-File: 
+File: (problem2.py)[https://github.com/Arpan733/HandsOn_DAA_1002276493/blob/main/Hands%20On%204/problem2.py]
 
 Code Summary:
 * Input: A sorted array of size N.
