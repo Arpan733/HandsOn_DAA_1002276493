@@ -12,7 +12,9 @@
 * In the first output, there are all the integers are taken as elements, while in the second output, all the elemetns are in float.
 
 * Output 1
+
 ![Heap_Output_1](https://github.com/user-attachments/assets/f8bb0024-dbf9-4ece-9922-304990a4c0e4)
 
 * Output 2
+
 ![Heap_Output_2](https://github.com/user-attachments/assets/dbf02649-8240-4a0c-9c4c-03498c1e3a9a)
