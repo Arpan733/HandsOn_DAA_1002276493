@@ -1,8 +1,7 @@
 # Hands On 6 Answers
 
 ## 1. Implement both versions of quicksort (random and non-random choice for the pivot) and share the GitHub repository with your source code.
-I have uploaded the file name: quicksort.py
-Also, I have mentioned the output for the code:
+I have uploaded the file "quicksort.py," which contains the quicksort code with random and non-random pivot choices. I have also mentioned the code's output.
 
 ![Question 1 Output](https://github.com/user-attachments/assets/aa0f642b-9a97-4b61-86c9-9549900ea01c)
 
