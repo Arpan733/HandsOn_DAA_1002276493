@@ -1,4 +1,4 @@
-# Hands On 8 Answers
+# Hands On 10 Answers
 
 ## 1. Implement a hash table and upload your code to GitHub:
 * ### Use the multiplication AND division method for your hash function
