@@ -10,7 +10,7 @@
 * ### Your Hash table should grow and shrink
     * ### When it's full double the array size and re-hash everything
     * ### When it's becoming empty e.g. 1/4 empty, then half the size of the array and re-hash everything
-
+ 
 #### Code File: hash_table.py
 #### Code Output:
 ![Hash_Table_Output](https://github.com/user-attachments/assets/b6eded8d-ab46-4576-b799-51fc9210306a)
