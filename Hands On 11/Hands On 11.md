@@ -14,7 +14,7 @@
 
 ---
 
-### 1. Red Black Tree
+### 2. Red Black Tree
 
 #### Code File: red_black_tree.py
 #### Code Output:
@@ -22,7 +22,7 @@
 
 ---
 
-### 1. AVL Tree
+### 3. AVL Tree
 
 #### Code File: avl.py
 #### Code Output:
