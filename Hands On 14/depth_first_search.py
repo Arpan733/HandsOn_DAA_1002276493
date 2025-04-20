@@ -9,19 +9,19 @@ class GraphDFS:
         self.graph[destination].append(source)
 
     def depth_first_search(self, start_node):
-        visited = set()
-        self.dfs_recursive(start_node, visited)
+        visited_node = set()
+        self.dfs_recursive(start_node, visited_node)
 
-    def dfs_recursive(self, node, visited):
-        if node in visited:
+    def dfs_recursive(self, node, visited_node):
+        if node in visited_node:
             return
 
         print(node, end=" ")
-        visited.add(node)
+        visited_node.add(node)
 
         for neighbor in self.graph[node]:
-            if neighbor not in visited:
-                self.dfs_recursive(neighbor, visited)
+            if neighbor not in visited_node:
+                self.dfs_recursive(neighbor, visited_node)
 
 
 graph = GraphDFS()

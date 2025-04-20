@@ -1,16 +1,21 @@
 class DisjointSet:
-    def __init__(self, n):
-        self.parent = list(range(n))
-        self.rank = [0] * n
+    def __init__(self):
+        self.parent = {}
+        self.rank = {}
 
-    def find(self, u):
-        if self.parent[u] != u:
-            self.parent[u] = self.find(self.parent[u])
-        return self.parent[u]
+    def make_set(self, node):
+        self.parent[node] = node
+        self.rank[node] = 0
 
-    def union(self, u, v):
-        root_u = self.find(u)
-        root_v = self.find(v)
+    def find_node(self, node):
+        if self.parent[node] != node:
+            self.parent[node] = self.find_node(self.parent[node])
+        
+        return self.parent[node]
+
+    def node_union(self, u, v):
+        root_u = self.find_node(u)
+        root_v = self.find_node(v)
 
         if root_u != root_v:
             if self.rank[root_u] > self.rank[root_v]:
@@ -23,51 +28,54 @@ class DisjointSet:
 
 
 class KruskalAlgorithm:
-    def __init__(self, vertices):
-        self.vertices = vertices
-        self.edges = []
+    def __init__(self):
+        self.graph_edges = set()
+        self.graph_nodes = set()
 
-    def add_edge(self, u, v, weight):
-        self.edges.append((weight, u, v))
+    def add_edge_to_graph(self, u, v, weight):
+        self.graph_edges.add((weight, u, v))
+        self.graph_nodes.update([u, v])
 
-    def kruskal(self):
-        self.edges.sort()
-        disjoint_set = DisjointSet(self.vertices)
+    def algorithm(self):
+        disjoint_set = DisjointSet()
+
+        for node in self.graph_nodes:
+            disjoint_set.make_set(node)
 
         mst = []
         total_weight = 0
-        for weight, u, v in self.edges:
-            if disjoint_set.find(u) != disjoint_set.find(v):
-                mst.append((u, v, weight))
-                total_weight += weight
-                disjoint_set.union(u, v)
+
+        for w, u, v in sorted(self.graph_edges):
+            if disjoint_set.find_node(u) != disjoint_set.find_node(v):
+                mst.append((u, v, w))
+                total_weight += w
+                disjoint_set.node_union(u, v)
 
         return mst, total_weight
 
 
-node_to_index = {'a': 0, 'b': 1, 'c': 2, 'd': 3, 'e': 4, 'f': 5, 'g': 6, 'h': 7, 'i': 8}
-index_to_node = {v: k for k, v in node_to_index.items()}
+kruskal_graph = KruskalAlgorithm()
 
-kruskal = KruskalAlgorithm(9)
-kruskal.add_edge(node_to_index['a'], node_to_index['b'], 4)
-kruskal.add_edge(node_to_index['a'], node_to_index['h'], 8)
-kruskal.add_edge(node_to_index['b'], node_to_index['h'], 11)
-kruskal.add_edge(node_to_index['b'], node_to_index['c'], 8)
-kruskal.add_edge(node_to_index['c'], node_to_index['i'], 2)
-kruskal.add_edge(node_to_index['c'], node_to_index['f'], 4)
-kruskal.add_edge(node_to_index['c'], node_to_index['d'], 7)
-kruskal.add_edge(node_to_index['d'], node_to_index['e'], 9)
-kruskal.add_edge(node_to_index['d'], node_to_index['f'], 14)
-kruskal.add_edge(node_to_index['e'], node_to_index['f'], 10)
-kruskal.add_edge(node_to_index['f'], node_to_index['g'], 2)
-kruskal.add_edge(node_to_index['g'], node_to_index['h'], 1)
-kruskal.add_edge(node_to_index['g'], node_to_index['i'], 6)
-kruskal.add_edge(node_to_index['h'], node_to_index['i'], 7)
+kruskal_graph.add_edge_to_graph('a', 'b', 4)
+kruskal_graph.add_edge_to_graph('a', 'h', 8)
+kruskal_graph.add_edge_to_graph('b', 'h', 11)
+kruskal_graph.add_edge_to_graph('b', 'c', 8)
+kruskal_graph.add_edge_to_graph('c', 'i', 2)
+kruskal_graph.add_edge_to_graph('c', 'f', 4)
+kruskal_graph.add_edge_to_graph('c', 'd', 7)
+kruskal_graph.add_edge_to_graph('d', 'e', 9)
+kruskal_graph.add_edge_to_graph('d', 'f', 14)
+kruskal_graph.add_edge_to_graph('e', 'f', 10)
+kruskal_graph.add_edge_to_graph('f', 'g', 2)
+kruskal_graph.add_edge_to_graph('g', 'h', 1)
+kruskal_graph.add_edge_to_graph('g', 'i', 6)
+kruskal_graph.add_edge_to_graph('h', 'i', 7)
 
-mst, total_weight = kruskal.kruskal()
+mst, total_weight = kruskal_graph.algorithm()
 
 print("Edges in the Minimum Spanning Tree (MST):")
+
 for u, v, weight in mst:
-    print(f"Edge ({index_to_node[u]}, {index_to_node[v]}) with weight {weight}")
+    print(f"Edge ({u}, {v}) with weight {weight}")
 
 print(f"Total weight of MST: {total_weight}")

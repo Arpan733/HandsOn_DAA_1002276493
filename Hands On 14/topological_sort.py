@@ -1,27 +1,32 @@
 from collections import defaultdict
 
 def topological_sort(graph):
-    visited = set()
-    stack = []
+    visited_node = set()
+    graph_stack = []
 
     def dfs(node):
-        visited.add(node)
+        visited_node.add(node)
+        
         for neighbor in graph[node]:
-            if neighbor not in visited:
+            if neighbor not in visited_node:
                 dfs(neighbor)
-        stack.append(node)
+        
+        graph_stack.append(node)
 
-    vertices = set(graph.keys())
+    graph_vertices = set(graph.keys())
+    
     for neighbors in graph.values():
-        vertices.update(neighbors)
+        graph_vertices.update(neighbors)
 
-    for v in sorted(vertices):
-        if v not in visited:
+    for v in sorted(graph_vertices):
+        if v not in visited_node:
             dfs(v)
 
-    return stack[::-1]
+    return graph_stack[::-1]
+
 
 graph = defaultdict(list)
+
 graph['m'].extend(['q', 'r', 'x'])
 graph['n'].extend(['q', 'u', 'o'])
 graph['q'].append('t')
@@ -35,5 +40,6 @@ graph['v'].extend(['x', 'w'])
 graph['w'].append('z')
 
 result = topological_sort(graph)
+
 print("Topological Sort Order:")
 print(result)
